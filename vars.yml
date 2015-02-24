@@ -1,0 +1,24 @@
+---
+hip_apps:
+  retinaOne:
+    log_level: 'ERROR'
+    consumers:
+      - { topic: "event_result", groupId: "retina" }
+
+  retinaTwo:
+    log_level: 'WARN'
+    hapi_off: 'false'
+    consumers:
+      - { topic: "retina_job_control", groupId: "retina" }
+      - { topic: "trigger_match", groupId: "retina" }
+
+  pupilOne:
+    log_level: 'DEBUG'
+    consumers:
+      - { topic: "pupil_thing", groupId: "pupil" }
+
+  pupilTwo:
+    log_level: 'INFO'
+    consumers:
+      - { topic: "pupil_job_control", groupId: "pupil" }
+      - { topic: "another_topic", groupId: "pupil" }

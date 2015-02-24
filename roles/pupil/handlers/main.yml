@@ -1,0 +1,5 @@
+---
+# You can parameterize a handler name.
+# This is huge. Makes our restart handlers simple.
+- name: restart {{app_name}}
+  action: debug msg="restarting {{app_name}}"
