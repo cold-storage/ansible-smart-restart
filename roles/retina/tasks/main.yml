@@ -1,0 +1,8 @@
+---
+- name: redeploy with notify restart
+  shell: 'echo "we just redeployed {{app_name}}"'
+  notify: restart {{app_name}}
+  register: my_message
+
+- name: just some feedback here
+  debug: msg="{{my_message}}"

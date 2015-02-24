@@ -1,0 +1,6 @@
+---
+- name: Example of parameterized role and app startup
+  hosts: a.b.com
+  roles:
+    - { role: 'retina', when: "'web' in group_names", app_name: 'retinaOne' }
+    - { role: 'retina', when: "'data' in group_names", app_name: 'retinaTwo' }

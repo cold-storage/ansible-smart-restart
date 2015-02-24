@@ -1,0 +1,31 @@
+# You don't even need any real remote servers.
+# You can test a lot of stuff locally.
+
+# Here's an inventory file with a few groups, but we only
+# run on web and data because of the when clause in hip.yml
+
+[data]
+data1.com
+data2.com
+
+[broker]
+broker1.com
+broker2.com
+broker3.com
+
+[service]
+service1.com
+service2.com
+service3.com
+service4.com
+service5.com
+
+[web]
+web.com
+
+[a.b.com:children]
+data
+broker
+service
+web
+
